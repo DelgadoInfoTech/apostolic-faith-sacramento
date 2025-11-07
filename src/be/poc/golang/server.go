@@ -31,9 +31,9 @@ func addMiddleware(app *fiber.App) {
 	addHealthChecks(app)
 
 	// Last middleware to match anything
-	app.Use(func(c *fiber.Ctx) {
-		c.SendStatus(404) // => 404 "Not Found"
-	})
+	// app.Use(func(c *fiber.Ctx) {
+	// 	c.SendStatus(404) // => 404 "Not Found"
+	// })
 }
 
 func addHealthChecks(app *fiber.App) {
@@ -46,9 +46,10 @@ func addHealthChecks(app *fiber.App) {
 			return true
 		},
 		LivenessEndpoint: "/live",
-		// ReadinessProbe: func(c *fiber.Ctx) bool {
-		// 	return serviceA.Ready()
-		// },
+		ReadinessProbe: func(c *fiber.Ctx) bool {
+			return true
+			// return serviceA.Ready()
+		},
 		ReadinessEndpoint: "/ready",
 	}))
 }

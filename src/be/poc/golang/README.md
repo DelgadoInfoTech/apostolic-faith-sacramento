@@ -166,5 +166,6 @@ app.Listen(":3000")
   - Now assets can be loaded from that directory!
 
 
+# References
 
-
+https://blog.logrocket.com/express-style-api-go-fiber/
