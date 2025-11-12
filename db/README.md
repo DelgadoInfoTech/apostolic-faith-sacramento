@@ -30,4 +30,8 @@ $ docker-compose up -f compose.db.yml -d --build
 
 The database should now be ready to query.  It is empty so no data is actually seeded.
 
+# Future plans
+
+DB Generation will be done via an ORM.  This is meant to demonstrate the power of PostgreSQL.
+
 
