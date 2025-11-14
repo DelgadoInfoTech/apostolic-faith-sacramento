@@ -1,8 +1,10 @@
 
-
 export default function Home() {
   return (
-    <h1 className="text-5xl underline">
-    </h1>
+    <div className="">
+      <h1 className="flex h-screen justify-center items-center">
+          Welcome!
+      </h1>
+    </div>
   )
 }
