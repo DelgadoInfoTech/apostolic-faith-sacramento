@@ -19,7 +19,13 @@
 3. Switch to this directory. 
 
 ```bash
-cd db
+cd infrastructure/db
+```
+
+Or, via Powershell:
+
+```pwsh
+Set-Location -Path infrastructure/db
 ```
 
 4. Run the compose stack.
@@ -28,18 +34,22 @@ cd db
 $ docker-compose up -f compose.db.yml -d --build
 ```
 
-1. Access PgAdmin and use the container name as the server name. 
+5. Access PgAdmin and use the container name as the server name. 
    1. See db.env for more credentials.
    2. Open your web browser and navigate to:
       1. https://localhost:5005
    3. You should be redirected to the login page for pgAdmin.  Enter the credentials from the db.env file here.
-2. Connect to the `postgres` db.
-3. Execute the create_db.sql script.
-4. Execute the seed.sql script.
+6. Connect to the `postgres` db.
+7. Execute the create_db.sql script.
+8. Execute the seed.sql script.
 
 The database should now be ready to query.  It is empty so no data is actually seeded.
 
 # Help!
+
+- Did you change to the right folder? Run `pwd` to see where you are at on the command line.
+
+Still stuck?
 
 Please review PgAdmin if you are stuck:
 https://www.pgadmin.org/docs/pgadmin4/9.10/index.html
