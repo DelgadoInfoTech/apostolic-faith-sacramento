@@ -28,10 +28,12 @@ Or, via Powershell:
 Set-Location -Path infrastructure/db
 ```
 
+- Generate a certificate, following the commands in the README.md for your system.
+
 4. Run the compose stack.
 
 ```bash
-$ docker-compose up -f compose.db.yml -d --build
+$ docker-compose -f compose.db.yml up -d --build
 ```
 
 5. Access PgAdmin and use the container name as the server name. 
