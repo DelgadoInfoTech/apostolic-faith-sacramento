@@ -6,7 +6,7 @@ import HomepageImage from '@/components/HomepageImage'
 
 export default function Navbar() {
     return (
-        <nav className="fixed top-0 w-full flex gap-40 items-center justify-center py-5 border-b border-gray-700">
+        <nav className="fixed z-50 top-0 w-full flex gap-40 items-center justify-center py-5 bg-white border-b border-gray-700">
 
             <div className="pr-0">
                 <HomepageImage />
