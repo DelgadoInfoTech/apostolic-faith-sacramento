@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from 'next/image';
-import HomepageImage from '@/components/HomepageImage'
+import HomepageImage from '@/components/ChurchLogo'
 import { FaRegCopyright } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
 import { IoLocationSharp } from "react-icons/io5";
@@ -21,7 +21,7 @@ import { IoMailOutline } from "react-icons/io5";
 
 export default function Footer() {
     return (
-      <footer className="bottom-0 w-full flex gap-40 items-center justify-center pt-20 py-5 bg-zinc-700 text-white">
+      <footer className="sticky top-[100vh] bottom-0 w-full flex gap-40 items-center justify-center pt-20 py-5 bg-zinc-700 text-white">
                 
                 <div>
                     <div className="flex gap-45 pb-10 border-b">

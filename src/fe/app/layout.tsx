@@ -2,7 +2,13 @@ import type {Metadata} from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer"
 import "./globals.css"
+import { Quicksand } from 'next/font/google';
 
+const quicksand = Quicksand({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-quicksand'
+})
 
 export const metadata: Metadata = {
   title: "Apostolic Faith Church Sacramento",
@@ -15,13 +21,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html className={`${quicksand.variable}`}lang="en">
       <body>
-        <div className="min-h-screen">
+        <div>
           <Navbar />
           {children}
           <Footer />
-        </div>
+       </div>
       </body>
     </html>
   )
