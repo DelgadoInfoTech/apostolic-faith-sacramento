@@ -2,13 +2,25 @@ import type {Metadata} from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer"
 import "./globals.css"
-import { Quicksand } from 'next/font/google';
+import { Quicksand, Lora, Merriweather, Barlow_Condensed, Libre_Baskerville} from 'next/font/google';
 
 const quicksand = Quicksand({
-  subsets: ['latin'],
-  weight: ['400', '700'],
   variable: '--font-quicksand'
 })
+
+const lora = Lora({
+  variable: '--font-lora'
+})
+
+const merriweather = Merriweather({
+  variable: '--font-merriweather'
+})
+
+const barlow_condensed = Barlow_Condensed({
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-barlow_condensed'
+})
+
 
 export const metadata: Metadata = {
   title: "Apostolic Faith Church Sacramento",
@@ -21,9 +33,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html className={`${quicksand.variable}`}lang="en">
+    <html lang="en" >
       <body>
-        <div>
+        <div className={`${quicksand.variable} ${lora.variable} ${merriweather.variable} ${barlow_condensed.variable}`}>
           <Navbar />
           {children}
           <Footer />

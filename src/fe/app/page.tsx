@@ -2,11 +2,6 @@ import {
   Button
 } from "@/components/ui/button"
 import Navbar from "@/components/Navbar";
-import { Geist } from 'next/font/google'
-
-const geist = Geist({
-  subsets: ['latin'],
-})
 
 export default function Home() {
   return (
@@ -18,7 +13,7 @@ export default function Home() {
         <h1 className="text-6xl text-white tracking-wide pb-4">
            Apostolic Faith Church
         </h1> 
-        <h1 className="text-4xl text-white text-center font-light">
+        <h1 className="text-4xl text-white text-center font-barlow">
            Sundays at 11:00 AM & 5:00 PM
         </h1> 
         <div className="flex gap-8 pt-5 justify-center items-center">
